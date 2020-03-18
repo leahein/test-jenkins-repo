@@ -7,7 +7,7 @@ pipeline {
         build(
           job: '../test-jenkins-repo-submodules',
           propagate: true,
-          wait: false
+          wait: true
         )
         echo 'Called build'
       }
