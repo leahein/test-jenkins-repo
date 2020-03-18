@@ -6,6 +6,9 @@ pipeline {
         echo 'Calling build'
         build(
           job: "../test-jenkins-repo-submodules/master",
+          parameters: [
+            string(name: 'test-submodule', value: 'test-jenkins-repo')
+          ],
           propagate: true,
         )
         echo 'Called build'
