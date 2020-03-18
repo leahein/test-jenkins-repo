@@ -9,8 +9,7 @@ pipeline {
           parameters: [
             string(name: 'submodules', value: 'test-jenkins-repo')
           ],
-          propagate: true,
-          wait: true
+          propagate: true
         )
         echo 'Called build'
       }
