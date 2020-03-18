@@ -10,6 +10,7 @@ pipeline {
             string(name: 'submodules', value: 'test-jenkins-repo')
           ],
           propagate: true
+          wait: false
         )
         echo 'Called build'
       }
