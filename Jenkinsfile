@@ -5,9 +5,8 @@ pipeline {
       steps {
         echo 'Calling build'
         build(
-          job: '../test-jenkins-repo-submodules',
+          job: 'chabeja',
           propagate: true,
-          wait: true
         )
         echo 'Called build'
       }
