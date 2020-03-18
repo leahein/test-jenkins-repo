@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building..'
+        echo 'Calling build'
+        build(
+          job: 'test-jenkins-repo-submodules',
+          parameters: [
+            string(name: 'submodules', value: 'test-jenkins-repo')
+          ],
+          propagate: true,
+          wait: true
+        )
+        echo 'Called build'
       }
     }
     stage('Test') {
