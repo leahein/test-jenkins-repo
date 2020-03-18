@@ -7,7 +7,7 @@ pipeline {
         build(
           job: "../test-jenkins-repo-submodules/master",
           parameters: [
-            string(name: 'test-submodule', value: 'test-jenkins-repo')
+            string(name: 'test_submodule', value: 'test-jenkins-repo')
           ],
           propagate: true,
         )
