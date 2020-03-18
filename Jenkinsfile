@@ -4,10 +4,11 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Calling build'
-        build(
+        response = build(
           job: "../test-jenkins-repo-submodules/master",
           propagate: true,
         )
+        echo ${response.result}
         echo 'Called build'
       }
     }
