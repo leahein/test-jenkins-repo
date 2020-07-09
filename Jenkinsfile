@@ -5,9 +5,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Calling build'
+        echo 'Calling downstream'
         updateSubmodules(submodule: 'test-jenkins-repo')
-        echo 'Called build'
+        echo 'Called downstream'
       }
     }
     stage('Deploy') {
